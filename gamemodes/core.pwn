@@ -3,7 +3,7 @@
 main()
 {
 	print("\n----------------------------------");
-	print(" Blank Gamemode by your name here");
+	print(" SA-MP Squid Games");
 	print("----------------------------------\n");
 }
 
