@@ -1,0 +1,143 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[21:15:54] filterscripts = ""  (string)
+[21:15:54] plugins = ""  (string)
+[21:15:54] 
+[21:15:54] Server Plugins
+[21:15:54] --------------
+[21:15:54]  Loaded 0 plugins.
+
+[21:15:54] [artwork:crc] lvpdpc2.dff CRC = 0x0
+[21:15:54] [artwork:error] Bad file: lvpdpc2.dff
+[21:15:54] [artwork:crc] lapdpd2.dff CRC = 0x0
+[21:15:54] [artwork:error] Bad file: lapdpd2.dff
+[21:15:54] [artwork:crc] wallzzz.dff CRC = 0x0
+[21:15:54] [artwork:error] Bad file: wallzzz.dff
+[21:15:55] I couldn't load any gamemode scripts. Please verify your server.cfg
+[21:15:55] It needs a gamemode0 line at the very least.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[21:16:49] filterscripts = ""  (string)
+[21:16:49] plugins = ""  (string)
+[21:16:49] 
+[21:16:49] Server Plugins
+[21:16:49] --------------
+[21:16:49]  Loaded 0 plugins.
+
+[21:16:49] [artwork:crc] lvpdpc2.dff CRC = 0x0
+[21:16:49] [artwork:error] Bad file: lvpdpc2.dff
+[21:16:49] [artwork:crc] lapdpd2.dff CRC = 0x0
+[21:16:49] [artwork:error] Bad file: lapdpd2.dff
+[21:16:49] [artwork:crc] wallzzz.dff CRC = 0x0
+[21:16:49] [artwork:error] Bad file: wallzzz.dff
+[21:16:50] 
+[21:16:50] Filterscripts
+[21:16:50] ---------------
+[21:16:50]   Loaded 0 filterscripts.
+
+[21:16:50] Script[gamemodes/core.amx]: Run time error 19: "File or function is not found"
+[21:16:50] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[21:17:35] filterscripts = ""  (string)
+[21:17:35] plugins = ""  (string)
+[21:17:35] 
+[21:17:35] Server Plugins
+[21:17:35] --------------
+[21:17:35]  Loaded 0 plugins.
+
+[21:17:35] [artwork:crc] lvpdpc2.dff CRC = 0x0
+[21:17:35] [artwork:error] Bad file: lvpdpc2.dff
+[21:17:35] [artwork:crc] lapdpd2.dff CRC = 0x0
+[21:17:35] [artwork:error] Bad file: lapdpd2.dff
+[21:17:35] [artwork:crc] wallzzz.dff CRC = 0x0
+[21:17:35] [artwork:error] Bad file: wallzzz.dff
+[21:17:35] 
+[21:17:35] Filterscripts
+[21:17:35] ---------------
+[21:17:35]   Loaded 0 filterscripts.
+
+[21:17:35] [artwork:crc] staff/circle.dff CRC = 0xE86AFA
+[21:17:35] [artwork:crc] staff/circle.txd CRC = 0xD6420CA1
+[21:17:35] [artwork:crc] staff/triangle.dff CRC = 0xE86AFA
+[21:17:35] [artwork:crc] staff/triangle.txd CRC = 0x29FDBDA5
+[21:17:35] [artwork:crc] staff/square.dff CRC = 0xE86AFA
+[21:17:35] [artwork:crc] staff/square.txd CRC = 0x7686DA78
+[21:17:35] [artwork:crc] player/girl.dff CRC = 0xA17CAFF1
+[21:17:35] [artwork:crc] player/girl.txd CRC = 0x27A29EC9
+[21:17:35] 
+----------------------------------
+[21:17:35]  SA-MP Squid Game - realdiegopoptart
+[21:17:35] ----------------------------------
+
+[21:17:35] Number of vehicle models: 0
+[21:37:02] [connection] incoming connection: 127.0.0.1:57884 id: 0
+[21:37:03] [join] Diego_Abramov has joined the server (0:127.0.0.1)
+[21:39:25] [part] Diego_Abramov has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[21:39:45] filterscripts = ""  (string)
+[21:39:45] plugins = ""  (string)
+[21:39:45] 
+[21:39:45] Server Plugins
+[21:39:45] --------------
+[21:39:45]  Loaded 0 plugins.
+
+[21:39:45] [artwork:crc] lvpdpc2.dff CRC = 0x0
+[21:39:45] [artwork:error] Bad file: lvpdpc2.dff
+[21:39:45] [artwork:crc] lapdpd2.dff CRC = 0x0
+[21:39:45] [artwork:error] Bad file: lapdpd2.dff
+[21:39:45] [artwork:crc] wallzzz.dff CRC = 0x0
+[21:39:45] [artwork:error] Bad file: wallzzz.dff
+[21:39:45] 
+[21:39:45] Filterscripts
+[21:39:45] ---------------
+[21:39:45]   Loaded 0 filterscripts.
+
+[21:39:45] [artwork:crc] staff/circle.dff CRC = 0xE86AFA
+[21:39:45] [artwork:crc] staff/circle.txd CRC = 0xD6420CA1
+[21:39:45] [artwork:crc] staff/triangle.dff CRC = 0xE86AFA
+[21:39:45] [artwork:crc] staff/triangle.txd CRC = 0x29FDBDA5
+[21:39:45] [artwork:crc] staff/square.dff CRC = 0xE86AFA
+[21:39:45] [artwork:crc] staff/square.txd CRC = 0x7686DA78
+[21:39:45] [artwork:crc] player/girl.dff CRC = 0xA17CAFF1
+[21:39:45] [artwork:crc] player/girl.txd CRC = 0x27A29EC9
+[21:39:45] 
+----------------------------------
+[21:39:45]  SA-MP Squid Game - realdiegopoptart
+[21:39:45] ----------------------------------
+
+[21:39:45] Number of vehicle models: 0
+[21:40:13] [connection] incoming connection: 127.0.0.1:60128 id: 0
+[21:40:14] [join] Diego_Abramov has joined the server (0:127.0.0.1)
+[22:02:38] [part] Diego_Abramov has left the server (0:1)
+Console input: exit
+[22:03:25] --- Server Shutting Down.

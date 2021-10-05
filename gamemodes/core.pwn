@@ -1,4 +1,18 @@
+/*
+
+Skins: 
+    20001 = Circle
+    20002 = Triangle
+    20003 = Square
+    20004 = Girl
+
+*/
+
 #include <a_samp>
+#include <izcmd>
+//#include <sscanf2>
+//#include <bcrypt>
+#include <afk>
 #include "./modular/define.pwn"
 #include "./modular/variable.pwn"
 #include "./modular/stock.pwn"
@@ -7,16 +21,24 @@
 main()
 {
 	print("\n----------------------------------");
-	print(" SA-MP Squid Games");
+	print(" SA-MP Squid Game - realdiegopoptart");
 	print("----------------------------------\n");
 }
 
 #include "./modular/function.pwn"
 #include "./modular/native.pwn"
+#include "./modular/dialog.pwn"
+#include "./modular/cmds/player.pwn"
+#include "./modular/cmds/admin.pwn"
+
 
 public OnGameModeInit()
 {
-	SetGameModeText("Blank Script");
+    AddCharModel(280, 20001, "staff/circle.dff", "staff/circle.txd");
+    AddCharModel(280, 20002, "staff/triangle.dff", "staff/triangle.txd");
+    AddCharModel(280, 20003, "staff/square.dff", "staff/square.txd");
+    AddCharModel(280, 20004, "player/girl.dff", "player/girl.txd");
+	SetGameModeText("Squid Game - Ver. 0.0.1");
 	AddPlayerClass(0, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
 	return 1;
 }
@@ -83,9 +105,3 @@ public OnPlayerUpdate(playerid)
 {
 	return 1;
 }
-
-public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
-{
-	return 1;
-}
-
