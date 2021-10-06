@@ -11,7 +11,7 @@ Skins:
 #include <a_samp>
 #include <izcmd>
 #include <sscanf2>
-#include <bcrypt>
+#include <samp_bcrypt>
 #include <streamer>
 #include <afk>
 #include "./modular/define.pwn"
