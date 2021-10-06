@@ -141,3 +141,122 @@ v0.3.DL-R1, (C)2005-2018 SA-MP Team
 [22:02:38] [part] Diego_Abramov has left the server (0:1)
 Console input: exit
 [22:03:25] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[22:05:17] filterscripts = ""  (string)
+[22:05:17] plugins = ""  (string)
+[22:05:17] 
+[22:05:17] Server Plugins
+[22:05:17] --------------
+[22:05:17]  Loaded 0 plugins.
+
+[22:05:17] [artwork:crc] lvpdpc2.dff CRC = 0x0
+[22:05:17] [artwork:error] Bad file: lvpdpc2.dff
+[22:05:17] [artwork:crc] lapdpd2.dff CRC = 0x0
+[22:05:17] [artwork:error] Bad file: lapdpd2.dff
+[22:05:17] [artwork:crc] wallzzz.dff CRC = 0x0
+[22:05:17] [artwork:error] Bad file: wallzzz.dff
+[22:05:17] 
+[22:05:17] Filterscripts
+[22:05:17] ---------------
+[22:05:17]   Loaded 0 filterscripts.
+
+[22:05:17] [artwork:crc] staff/circle.dff CRC = 0xE86AFA
+[22:05:17] [artwork:crc] staff/circle.txd CRC = 0xD6420CA1
+[22:05:17] [artwork:crc] staff/triangle.dff CRC = 0xE86AFA
+[22:05:17] [artwork:crc] staff/triangle.txd CRC = 0x29FDBDA5
+[22:05:17] [artwork:crc] staff/square.dff CRC = 0xE86AFA
+[22:05:17] [artwork:crc] staff/square.txd CRC = 0x7686DA78
+[22:05:17] [artwork:crc] player/girl.dff CRC = 0xA17CAFF1
+[22:05:17] [artwork:crc] player/girl.txd CRC = 0x27A29EC9
+[22:05:17] 
+----------------------------------
+[22:05:17]  SA-MP Squid Game - realdiegopoptart
+[22:05:17] ----------------------------------
+
+[22:05:17] Number of vehicle models: 0
+[22:06:43] [connection] incoming connection: 127.0.0.1:61785 id: 0
+[22:06:43] [join] Diego_Abramov has joined the server (0:127.0.0.1)
+[22:08:39] [part] Diego_Abramov has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[22:09:56] filterscripts = ""  (string)
+[22:09:56] plugins = ""  (string)
+[22:09:56] 
+[22:09:56] Server Plugins
+[22:09:56] --------------
+[22:09:56]  Loaded 0 plugins.
+
+[22:09:56] 
+[22:09:56] Filterscripts
+[22:09:56] ---------------
+[22:09:56]   Loaded 0 filterscripts.
+
+[22:09:56] [artwork:crc] staff/circle.dff CRC = 0xE86AFA
+[22:09:56] [artwork:crc] staff/circle.txd CRC = 0xD6420CA1
+[22:09:56] [artwork:crc] staff/triangle.dff CRC = 0xE86AFA
+[22:09:56] [artwork:crc] staff/triangle.txd CRC = 0x29FDBDA5
+[22:09:56] [artwork:crc] staff/square.dff CRC = 0xE86AFA
+[22:09:56] [artwork:crc] staff/square.txd CRC = 0x7686DA78
+[22:09:56] [artwork:crc] player/girl.dff CRC = 0xA17CAFF1
+[22:09:56] [artwork:crc] player/girl.txd CRC = 0x27A29EC9
+[22:09:56] 
+----------------------------------
+[22:09:56]  SA-MP Squid Game - realdiegopoptart
+[22:09:56] ----------------------------------
+
+[22:09:56] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[22:10:08] filterscripts = ""  (string)
+[22:10:08] plugins = ""  (string)
+[22:10:08] 
+[22:10:08] Server Plugins
+[22:10:08] --------------
+[22:10:08]  Loaded 0 plugins.
+
+[22:10:08] 
+[22:10:08] Filterscripts
+[22:10:08] ---------------
+[22:10:08]   Loaded 0 filterscripts.
+
+[22:10:08] [artwork:crc] staff/circle.dff CRC = 0xE86AFA
+[22:10:08] [artwork:crc] staff/circle.txd CRC = 0xD6420CA1
+[22:10:08] [artwork:crc] staff/triangle.dff CRC = 0xE86AFA
+[22:10:08] [artwork:crc] staff/triangle.txd CRC = 0x29FDBDA5
+[22:10:08] [artwork:crc] staff/square.dff CRC = 0xE86AFA
+[22:10:08] [artwork:crc] staff/square.txd CRC = 0x7686DA78
+[22:10:08] [artwork:crc] player/girl.dff CRC = 0xA17CAFF1
+[22:10:08] [artwork:crc] player/girl.txd CRC = 0x27A29EC9
+[22:10:08] 
+----------------------------------
+[22:10:08]  SA-MP Squid Game - realdiegopoptart
+[22:10:08] ----------------------------------
+
+[22:10:08] Number of vehicle models: 0
+[22:10:34] [connection] incoming connection: 127.0.0.1:62614 id: 0
+[22:10:34] [join] Diego_Abramov has joined the server (0:127.0.0.1)
+[22:12:45] [part] Diego_Abramov has left the server (0:1)
+Console input: exit
+[22:16:24] --- Server Shutting Down.
