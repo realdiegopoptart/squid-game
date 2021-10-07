@@ -4,18 +4,18 @@
 					===========================
 Description:
 	Provides efficient looping through sparse data sets, such as connected
-	players.  Significantly improved from the original version to be a generic
-	loop system, rather then purely a player loop system.  When used for
+	players. Significantly improved from the original version to be a generic
+	loop system, rather then purely a player loop system. When used for
 	players this has constant time O(n) for number of connected players (n),
 	unlike standard player loops which are O(MAX_PLAYERS), regardless of the
-	actual number of connected players.  Even when n is MAX_PLAYERS this is
+	actual number of connected players. Even when n is MAX_PLAYERS this is
 	still faster.
 Legal:
 	Version: MPL 1.1
 	
 	The contents of this file are subject to the Mozilla Public License Version 
 	1.1 (the "License"); you may not use this file except in compliance with 
-	the License. You may obtain a copy of the License at 
+	the License. You may obtain a copy of the License at
 	http://www.mozilla.org/MPL/
 	
 	Software distributed under the License is distributed on an "AS IS" basis,
@@ -30,7 +30,7 @@ Legal:
 	the Initial Developer. All Rights Reserved.
 	
 	Contributors:
-		ZeeX, koolk, JoeBullet/Google63, g_aSlice/Slice, Kar
+		ZeeX, koolk, JoeBullet/Google63, g_aSlice/Slice, Kar, ZiGGi
 	
 	Thanks:
 		JoeBullet/Google63 - Handy arbitrary ASM jump code using SCTRL.
@@ -53,10 +53,15 @@ Legal:
 		SA:MP Team past, present and future - SA:MP.
 	
 Version:
-	19 (0.4.2)
-Changelog:
-	14/05/15:
-		Cleaned up the entire include.
+	19 (0.4.3)
+Changelog:S
+	26/06/17 (0.4.3):
+		foreach: clear each iterator under OnFilterScriptInit/OnGameModeInit.
+		Added a revised Iter_SafeRemoveInternal by ZiGGi.
+		Fix some grammar issue with spaces.
+	14/05/15 (0.4.2):
+		Code cleanup (renamed all Itter_ to Iter and removed excess).
+		Removed unnecessary information.
 	16/07/12:
 		Fixed a bug with "loadfs" blocking callbacks.
 		Slightly reduced the memory consumption of constant strings.
@@ -172,6 +177,9 @@ Iterators:
 	Character - All players and bots.
 \*----------------------------------------------------------------------------*/
 
+#if defined _FOREACH_LOCAL_VERSION
+	#endinput
+#endif
 #define _FOREACH_LOCAL_VERSION		19
 
 // Foreach is testing us.
@@ -281,7 +289,9 @@ Return:
 	-
 Notes:
 	Wrapper for Iter_InitInternal.
+
 native Iter_Init(IteratorArray:Name[]<>);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Init(%1) \
@@ -317,7 +327,9 @@ Return:
 	-
 Notes:
 	Wrapper for Iter_AddInternal.
+
 native Iter_Add(Iterator:Name<>, value);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Add(%1,%2) Iter_AddInternal(_Y_ITER_ARRAY:%1@YSII_Cg,_Y_ITER_ARRAY:%1@YSII_Ag,%2,_Y_ITER_ARRAY_SIZE(%1))
@@ -331,7 +343,9 @@ Return:
 	-
 Notes:
 	Wrapper for Iter_FreeInternal.
+
 native Iter_Free(Iterator:Name<>);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Free(%1) Iter_FreeInternal(_Y_ITER_ARRAY:%1@YSII_Ag,_Y_ITER_ARRAY_SIZE(%1))
@@ -346,7 +360,9 @@ Return:
 	-
 Notes:
 	Wrapper for Iter_RemoveInternal.
+
 native Iter_Remove(Iterator:Name<>, value);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Remove(%1,%2) Iter_RemoveInternal(_Y_ITER_ARRAY:%1@YSII_Cg,_Y_ITER_ARRAY:%1@YSII_Ag,%2,_Y_ITER_ARRAY_SIZE(%1))
@@ -361,7 +377,9 @@ Return:
 	-
 Notes:
 	Checks if the given value is in the given iterator.
+
 native Iter_Remove(Iterator:Name<>, value);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Contains(%1,%2) Iter_ContainsInternal(_Y_ITER_ARRAY:%1@YSII_Ag,%2,_Y_ITER_ARRAY_SIZE(%1))
@@ -376,10 +394,12 @@ Params:
 Return:
 	-
 Notes:
-	Wrapper for Iter_SafeRemoveInternal.  Common use:
+	Wrapper for Iter_SafeRemoveInternal. Common use:
 	
 	Iter_SafeRemove(iter, i, i);
+
 native Iter_SafeRemove(Iterator:Name<>, value, &next);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_SafeRemove(%1,%2,%3) Iter_SafeRemoveInternal(_Y_ITER_ARRAY:%1@YSII_Cg,_Y_ITER_ARRAY:%1@YSII_Ag,%2,%3,_Y_ITER_ARRAY_SIZE(%1))
@@ -393,7 +413,9 @@ Return:
 	-
 Notes:
 	Wrapper for Iter_RandomInternal.
+
 native Iter_Random(Iterator:Name<>);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Random(%1) Iter_RandomInternal(_Y_ITER_ARRAY:%1@YSII_Cg,_Y_ITER_ARRAY:%1@YSII_Ag,_Y_ITER_ARRAY_SIZE(%1))
@@ -407,7 +429,9 @@ Return:
 	-
 Notes:
 	Returns the number of items in this iterator.
+
 native Iter_Count(Iterator:Name<>);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Count(%1) (_Y_ITER_ARRAY:%1@YSII_Cg)
@@ -421,7 +445,9 @@ Return:
 	-
 Notes:
 	Wrapper for Iter_ClearInternal.
+
 native Iter_Clear(IteratorArray:Name[]<>);
+
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Clear(%1) Iter_ClearInternal(_Y_ITER_ARRAY:%1@YSII_Cg,_Y_ITER_ARRAY:%1@YSII_Ag,_Y_ITER_ARRAY_SIZE(%1))
@@ -468,7 +494,7 @@ Return:
 Notes:
 	Not exactly the same as PHP foreach, just iterates through a list and
 	returns the value of the current slot but uses that slot as the next index
-	too.  Variables must be in the form @YSII_<gname>S for the start index and
+	too. Variables must be in the form @YSII_<gname>S for the start index and
 	@YSII_<gname>A for the data array where <name> is what's entered in data.
 \*----------------------------------------------------------------------------*/
 
@@ -479,7 +505,7 @@ Notes:
 #define new%0|||%9|||%1:%2||| %9|||%0|||%1|||%2|||
 
 // This one is called if the new syntax is required, but the state of "new" is
-// as-yet unknown.  This attempts to call "%1" as a macro, if it starts with
+// as-yet unknown. This attempts to call "%1" as a macro, if it starts with
 // "new" as a whole word then it will (and will also helpfully strip off the
 // "new" keyword for us).
 #define Y_FOREACH_THIRD|||%0|||%1|||%2||| %1=Y_FOREACH_FIFTH|||Y_FOREACH_FOURTH|||%1:%2|||
@@ -532,12 +558,12 @@ Params:
 Return:
 	-
 Notes:
-	Adds a player to the loop data.  Now sorts the list too.  Note that I found
+	Adds a player to the loop data. Now sorts the list too. Note that I found
 	the most bizzare bug ever (I *think* it may be a compiler but, but it
 	requires further investigation), basically it seems that multiple variables
 	were being treated as the same variable (namely @YSII_EgotS and
 	@YSII_CgharacterS were the same and @YSII_EgotC and @YSII_CgharacterC were the
-	same).  Adding print statements which reference these variables seem to fix
+	same). Adding print statements which reference these variables seem to fix
 	the problem, and I have tried to make sure that the values will never actually
 	get printed.
 \*----------------------------------------------------------------------------*/
@@ -586,12 +612,17 @@ Return:
 	-
 Notes:
 	Fixes a bug where callbacks are not detected when "loadfs" is used after the
-	GM has already started.  If this is a GM this is just never used called.
+	GM has already started. If this is a GM this is just never used called.
 \*----------------------------------------------------------------------------*/
 
 #if !defined BOTSYNC_IS_BOT
 	public OnFilterScriptInit()
 	{
+		Iter_Clear(Player);
+		#if defined _FOREACH_BOT && !defined FOREACH_NO_BOTS
+			Iter_Clear(Bot);
+			Iter_Clear(Character);
+		#endif
 		if (funcidx(YSI_gsOnPlayerDisconnect) != -1)
 		{
 			YSI_g_sCallbacks |= 1;
@@ -679,7 +710,7 @@ Return:
 	-
 Notes:
 	There are WIERD bugs in this script, seemingly caused by the compiler, so
-	this hopefully fixes them.  The OnGameModeInit code is written to be
+	this hopefully fixes them. The OnGameModeInit code is written to be
 	very fast by utilising the internal array structure instead of the regular
 	Add functions.
 \*----------------------------------------------------------------------------*/
@@ -688,6 +719,11 @@ Notes:
 	public OnGameModeInit()
 	{
 		// Clear everything.
+		Iter_Clear(Player);
+		#if defined _FOREACH_BOT && !defined FOREACH_NO_BOTS
+			Iter_Clear(Bot);
+			Iter_Clear(Character);
+		#endif
 		if (funcidx(YSI_gsOnPlayerDisconnect) != -1)
 		{
 			YSI_g_sCallbacks |= 1;
@@ -787,8 +823,8 @@ Params:
 Return:
 	-
 Notes:
-	Removes a player from the loop data.  No longer uses "hook" to ENSURE that
-	this is always last.  Previously I think that the order of evaluation in
+	Removes a player from the loop data. No longer uses "hook" to ENSURE that
+	this is always last. Previously I think that the order of evaluation in
 	y_hooks meant that this got called before the user "OnPlayerDisconnect".
 \*----------------------------------------------------------------------------*/
 
@@ -892,9 +928,9 @@ Params:
 Return:
 	-
 Notes:
-	Finds the first free slot in the iterator.  Iterators now HAVE to be
+	Finds the first free slot in the iterator. Iterators now HAVE to be
 	sorted for this function to work correctly as it uses that fact to decide
-	whether a slot is unused or the last one.  If you want to use the slot
+	whether a slot is unused or the last one. If you want to use the slot
 	straight after finding it the iterator will need to re-find it to add in
 	the data.
 \*----------------------------------------------------------------------------*/
@@ -922,8 +958,8 @@ Params:
 Return:
 	-
 Notes:
-	Adds a value to a given iterator set.  Now detects when you try and add the
-	last item multiple times, as well as all the other items.  Now simplified even
+	Adds a value to a given iterator set. Now detects when you try and add the
+	last item multiple times, as well as all the other items. Now simplified even
 	further with the new internal representation.
 \*----------------------------------------------------------------------------*/
 
@@ -983,7 +1019,7 @@ Notes:
 	Removes a value from an iterator safely.
 \*----------------------------------------------------------------------------*/
 
-stock Iter_SafeRemoveInternal(&count, array[], value, &last, size)
+/*stock Iter_SafeRemoveInternal(&count, array[], value, &last, size)
 {
 	if (0 <= value < size && array[value] <= size)
 	{
@@ -999,6 +1035,26 @@ stock Iter_SafeRemoveInternal(&count, array[], value, &last, size)
 		array[value] = size + 1;
 		--count;
 		return 1;
+	}
+	return 0;
+}*/
+
+stock Iter_SafeRemoveInternal(&count, array[], value, &last, size)
+{
+	if (0 <= value < size && array[value] <= size) {
+		last = size;
+		new
+			next = array[last];
+		while (next < size) {
+			if (next == value) {
+				array[last] = array[value];
+				array[value] = size + 1;
+				--count;
+				return 1;
+			}
+			last = next;
+			next = array[last];
+		}
 	}
 	return 0;
 }
@@ -1173,7 +1229,7 @@ Params:
 Return:
 	-
 Notes:
-	Gets the element in an iterator before the current one.  Slow.
+	Gets the element in an iterator before the current one. Slow.
 \*----------------------------------------------------------------------------*/
 
 #define Iter_Prev(%1,%2) Iter_PrevInternal(_Y_ITER_ARRAY:%1@YSII_Ag,_Y_ITER_ARRAY_SIZE(%1),(%2))
