@@ -1,6 +1,6 @@
 /*
 
-	SQUID GAME IN SA:MP - realdiegopoptart#2998]
+	SQUID GAME IN SA:MP - realdiegopoptart#2998
 		
 Dependencies
 	a_samp     - SA:MP Development Team (https://sa-mp.com)
@@ -10,7 +10,7 @@ Dependencies
 	afk		   - realdiegopoptart (https://github.com/realdiegopoptart/samp-libaries/blob/main/iafk.inc)
 	eSelection - TommyB (https://github.com/TommyB123/eSelection)
 	PawnPlus   - IllidanS4 (https://github.com/IllidanS4/PawnPlus)
-	
+
 Skins: 
     20001 = Circle
     20002 = Triangle
