@@ -3,12 +3,14 @@
 	SQUID GAME IN SA:MP - realdiegopoptart#2998]
 		
 Dependencies
-	a_samp   - SA:MP Development Team (https://sa-mp.com)
-	izcmd  	 - YashasSamaga (https://github.com/YashasSamaga/I-ZCMD/)
-	sscanf2  - maddinat0r (https://github.com/maddinat0r/sscanf)
-	streamer - Incognito (https://github.com/samp-incognito/samp-streamer-plugin)
-	afk		 - realdiegopoptart (https://github.com/realdiegopoptart/samp-libaries/blob/main/iafk.inc)
-
+	a_samp     - SA:MP Development Team (https://sa-mp.com)
+	izcmd      - YashasSamaga (https://github.com/YashasSamaga/I-ZCMD/)
+	sscanf2    - maddinat0r (https://github.com/maddinat0r/sscanf)
+	streamer   - Incognito (https://github.com/samp-incognito/samp-streamer-plugin)
+	afk		   - realdiegopoptart (https://github.com/realdiegopoptart/samp-libaries/blob/main/iafk.inc)
+	eSelection - TommyB (https://github.com/TommyB123/eSelection)
+	PawnPlus   - IllidanS4 (https://github.com/IllidanS4/PawnPlus)
+	
 Skins: 
     20001 = Circle
     20002 = Triangle
@@ -24,6 +26,8 @@ Skins:
 #include <samp_bcrypt>
 #include <streamer>
 #include <iafk>
+#include <eSelection>
+#include <PawnPlus>
 #include "./modular/define.pwn"
 #include "./modular/variable.pwn"
 #include "./modular/stock.pwn"

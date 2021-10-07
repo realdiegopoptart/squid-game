@@ -260,3 +260,62 @@ v0.3.DL-R1, (C)2005-2018 SA-MP Team
 [22:12:45] [part] Diego_Abramov has left the server (0:1)
 Console input: exit
 [22:16:24] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[19:50:44] filterscripts = ""  (string)
+[19:50:44] 
+[19:50:44] Server Plugins
+[19:50:44] --------------
+[19:50:44]  Loading plugin: sscanf
+[19:50:44] 
+
+[19:50:44]  ===============================
+
+[19:50:44]       sscanf plugin loaded.     
+
+[19:50:44]          Version:  2.8.3        
+
+[19:50:44]   (c) 2018 Alex "Y_Less" Cole  
+
+[19:50:44]  ===============================
+
+[19:50:44]   Loaded.
+[19:50:44]  Loading plugin: streamer
+[19:50:44] 
+
+*** Streamer Plugin v2.9.5 by Incognito loaded ***
+
+[19:50:44]   Loaded.
+[19:50:44]  Loading plugin: samp_bcrypt
+[19:50:46] [SampBcrypt] [info]: Version: 0.3.4
+[19:50:46]   Loaded.
+[19:50:46]  Loaded 3 plugins.
+
+[19:50:46] 
+[19:50:46] Filterscripts
+[19:50:46] ---------------
+[19:50:46]   Loaded 0 filterscripts.
+
+[19:50:46] [artwork:crc] staff/circle.dff CRC = 0xE86AFA
+[19:50:46] [artwork:crc] staff/circle.txd CRC = 0xD6420CA1
+[19:50:47] [artwork:crc] staff/triangle.dff CRC = 0xE86AFA
+[19:50:47] [artwork:crc] staff/triangle.txd CRC = 0x29FDBDA5
+[19:50:47] [artwork:crc] staff/square.dff CRC = 0xE86AFA
+[19:50:47] [artwork:crc] staff/square.txd CRC = 0x7686DA78
+[19:50:47] [artwork:crc] player/girl.dff CRC = 0xA17CAFF1
+[19:50:47] [artwork:crc] player/girl.txd CRC = 0x27A29EC9
+[19:50:47] 
+----------------------------------
+[19:50:47]  SA-MP Squid Game - realdiegopoptart
+[19:50:47] ----------------------------------
+
+[19:50:47] Number of vehicle models: 0
+[19:51:40] [connection] incoming connection: 127.0.0.1:62511 id: 0
+[19:51:40] [join] Diego_Poptart has joined the server (0:127.0.0.1)
