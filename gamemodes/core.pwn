@@ -100,21 +100,7 @@ public OnPlayerDisconnect(playerid, reason)
 public OnPlayerSpawn(playerid)
 {
 	return 1;
-}
-
-public OnPlayerDeath(playerid, killerid, reason)
-{
-    if(killerid != INVALID_PLAYER_ID)
-	{
-	    SetPlayerScore(killerid, GetPlayerScore(killerid) + 1);
-		PlayerInfo[killerid][pKills]++;
-	}
-
-	SetPlayerScore(playerid, GetPlayerScore(playerid) - 1);
-    PlayerInfo[playerid][pDeaths]++;
-	return 1;
-}
-
+}`
 
 public OnPlayerText(playerid, text[])
 {
