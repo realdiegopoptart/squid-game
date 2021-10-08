@@ -52,8 +52,15 @@ public OnPlayerRegister(playerid)
 forward ResetPlayerStats(playerid);
 public ResetPlayerStats(playerid)
 {
+	SetPlayerScore(playerid, 0);
+	PlayerInfo[playerid][pLogged] = false;
 	PlayerInfo[playerid][pKills] = 0;
 	PlayerInfo[playerid][pDeaths] = 0;
-	PlayerInfo[playerid][pLogged] = false;
+    PlayerInfo[playerid][pScore] = 0
+    PlayerInfo[playerid][pGamesWon] = 0;
+    PlayerInfo[playerid][pMoney] = 0;
+    PlayerInfo[playerid][pAdmin] = 0;
+    PlayerInfo[playerid][pSkin] = 0;
+    PlayerInfo[playerid][pCustomSkin] 0;
 	return 1;
 }

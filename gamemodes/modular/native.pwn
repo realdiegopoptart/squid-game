@@ -2,11 +2,11 @@ public OnPlayerDeath(playerid, killerid, reason)
 {
     if(killerid != INVALID_PLAYER_ID)
 	{
-	    SetPlayerScore(killerid, GetPlayerScore(killerid) + 1);
+	    SetPlayerScoreEx(killerid, GetPlayerScore(killerid) + 1);
 		PlayerInfo[killerid][pKills]++;
 	}
 
-	SetPlayerScore(playerid, GetPlayerScore(playerid) - 1);
+	SetPlayerScoreEx(playerid, GetPlayerScore(playerid) - 1);
     PlayerInfo[playerid][pDeaths]++;
 	return 1;
 }

@@ -81,7 +81,7 @@ public OnPlayerRequestClass(playerid, classid)
 
 public OnPlayerConnect(playerid)
 {
-	SetPlayerScore(playerid, 0);
+	SetPlayerScoreEx(playerid, 0);
 	ResetPlayerStats(playerid);
 	
 

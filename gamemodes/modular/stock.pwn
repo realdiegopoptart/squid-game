@@ -1,4 +1,4 @@
-stock GetPlayerNameEx(playerid)
+GetPlayerNameEx(playerid)
 {
 	new name[MAX_PLAYER_NAME];
 	GetPlayerName(playerid, name, sizeof(name));
@@ -44,4 +44,11 @@ SetPlayerSkinEx(playerid, skinid) // Forked by Open.MP
     {
         return SetPlayerSkin(playerid, skinid);
     }
+}
+
+SetPlayerScoreEx(playerid, score)
+{
+    SetPlayerScore(playerid, score);
+    PlayerInfo[playerid][pScore] = score;
+    return 1;
 }
