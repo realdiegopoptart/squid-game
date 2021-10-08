@@ -24,13 +24,24 @@ stock DB_Escape(text[])//Credits: Y_Less
     return ret;
 }
 
+
 stock SaveAccount(playerid)
 {
     new query[256];
 	if(PlayerInfo[playerid][pLogged] == true)
 	{
 	    format(query, sizeof(query),
-		"UPDATE `USERS` SET SCORE = '%d', KILLS = '%d', DEATHS = '%d' WHERE `NAME` = '%s' COLLATE NOCASE", GetPlayerScore(playerid), PlayerInfo[playerid][pKills], PlayerInfo[playerid][pDeaths], DB_Escape(GetPlayerNameEx(playerid)));
+		"UPDATE `USERS` SET SCORE = '%d', KILLS = '%d', ADMIN = `%i`, SKIN = `%i`, CUSTOMSKIN = `%i`, GAMESWON = `%i`, MONEY = '%i', DEATHS = '%d' WHERE `NAME` = '%s' COLLATE NOCASE", 
+        GetPlayerScore(playerid), 
+        PlayerInfo[playerid][pKills], 
+        PlayerInfo[playerid[pAdmin], 
+        PlayerInfo[playerid][pSkin],
+        PlayerInfo[playerid][pCustomSkin],
+        PlayerInfo[playerid][pGamesWon],
+        PlayerInfo[playerid][pMoney],
+        PlayerInfo[playerid][pDeaths], 
+        DB_Escape(GetPlayerNameEx(playerid)));
+
 		database_result = db_query(server_database, query);
 		db_free_result(database_result);
 	}

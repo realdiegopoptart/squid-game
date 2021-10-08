@@ -2,4 +2,4 @@
 
     //TABLE USERS
     db_query(server_database, "CREATE TABLE IF NOT EXISTS `USERS`\
-(`NAME`, `PASS`, `SCORE`, `KILLS`, `DEATHS`, `GAMESWON`, `MONEY`, `ADMIN)");
+(`NAME`, `PASS`, `SCORE`, `KILLS`, `DEATHS`, `GAMESWON`, `MONEY`, `ADMIN, `SKIN`, `CUSTOMSKIN`)");

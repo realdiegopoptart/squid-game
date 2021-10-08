@@ -15,7 +15,14 @@ Skins:
     20001 = Circle
     20002 = Triangle
     20003 = Square
-    20004 = Girl
+    20004 = lilnasx
+	20005 = marshmello
+	20006 = noob
+	20007 = shark
+	20008 = soccer
+	20009 = spiderman
+	20010 = winnepoo
+	20011 = wolf
 
 */
 
@@ -75,12 +82,9 @@ public OnPlayerRequestClass(playerid, classid)
 public OnPlayerConnect(playerid)
 {
 	SetPlayerScore(playerid, 0);
+	ResetPlayerStats(playerid);
 	
-	PlayerInfo[playerid][pKills] = 0;
-	PlayerInfo[playerid][pDeaths] = 0;
-	
-	PlayerInfo[playerid][pLogged] = false;
-	
+
     new query[128];
 	format(query, sizeof(query), "SELECT `NAME` FROM `USERS` WHERE `NAME` = '%s' COLLATE NOCASE", DB_Escape(GetPlayerNameEx(playerid)));
   	database_result = db_query(server_database, query);

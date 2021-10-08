@@ -49,3 +49,11 @@ public OnPlayerRegister(playerid)
 	return 1;
 }
 
+forward ResetPlayerStats(playerid);
+public ResetPlayerStats(playerid)
+{
+	PlayerInfo[playerid][pKills] = 0;
+	PlayerInfo[playerid][pDeaths] = 0;
+	PlayerInfo[playerid][pLogged] = false;
+	return 1;
+}
