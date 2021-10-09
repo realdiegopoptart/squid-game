@@ -73,7 +73,6 @@ public OnGameModeExit()
 	return 1;
 }
 
-
 public OnPlayerRequestClass(playerid, classid)
 {
 	SetPlayerPos(playerid, 1958.3783, 1343.1572, 15.3746);
