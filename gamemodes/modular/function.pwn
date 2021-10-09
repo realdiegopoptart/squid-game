@@ -56,11 +56,11 @@ public ResetPlayerStats(playerid)
 	PlayerInfo[playerid][pLogged] = false;
 	PlayerInfo[playerid][pKills] = 0;
 	PlayerInfo[playerid][pDeaths] = 0;
-    PlayerInfo[playerid][pScore] = 0
+    PlayerInfo[playerid][pScore] = 0;
     PlayerInfo[playerid][pGamesWon] = 0;
     PlayerInfo[playerid][pMoney] = 0;
     PlayerInfo[playerid][pAdmin] = 0;
     PlayerInfo[playerid][pSkin] = 0;
-    PlayerInfo[playerid][pCustomSkin] 0;
+    PlayerInfo[playerid][pCustomSkin] = 0;
 	return 1;
 }

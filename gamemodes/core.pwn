@@ -26,6 +26,9 @@ Skins:
 
 */
 
+// Community Compiler
+#pragma warning disable 239, 214 //, 217 << loose indents
+
 #include <a_samp>
 #include <izcmd>
 #include <foreach>
@@ -33,8 +36,7 @@ Skins:
 #include <samp_bcrypt>
 #include <streamer>
 #include <iafk>
-#include <eSelection>
-#include <PawnPlus>
+#include <mSelection>
 #include "./modular/define.pwn"
 #include "./modular/variable.pwn"
 #include "./modular/stock.pwn"
@@ -59,6 +61,7 @@ public OnGameModeInit()
 {
 	SetGameModeText(""SERVER_NAME" - Ver. "SERVER_VER"");
 	AddPlayerClass(0, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
+	#include <./modular/maps/game1_6.pwn"
 	#include "./modular/custom.pwn"
 	#include "./modular/sql/create.pwn"
 	return 1;
@@ -108,7 +111,7 @@ public OnPlayerDisconnect(playerid, reason)
 public OnPlayerSpawn(playerid)
 {
 	return 1;
-}`
+}
 
 public OnPlayerText(playerid, text[])
 {

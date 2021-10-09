@@ -27,14 +27,14 @@ stock DB_Escape(text[])//Credits: Y_Less
 
 stock SaveAccount(playerid)
 {
-    new query[256];
+    new query[450];
 	if(PlayerInfo[playerid][pLogged] == true)
 	{
 	    format(query, sizeof(query),
 		"UPDATE `USERS` SET SCORE = '%d', KILLS = '%d', ADMIN = `%i`, SKIN = `%i`, CUSTOMSKIN = `%i`, GAMESWON = `%i`, MONEY = '%i', DEATHS = '%d' WHERE `NAME` = '%s' COLLATE NOCASE", 
         GetPlayerScore(playerid), 
         PlayerInfo[playerid][pKills], 
-        PlayerInfo[playerid[pAdmin], 
+        PlayerInfo[playerid][pAdmin], 
         PlayerInfo[playerid][pSkin],
         PlayerInfo[playerid][pCustomSkin],
         PlayerInfo[playerid][pGamesWon],
