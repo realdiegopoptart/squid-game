@@ -1,6 +1,8 @@
 /*
 
+
 	SQUID GAME IN SA:MP - realdiegopoptart#2998
+
 		
 Dependencies
 	a_samp     - SA:MP Development Team (https://sa-mp.com)
