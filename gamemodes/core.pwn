@@ -61,7 +61,7 @@ public OnGameModeInit()
 {
 	SetGameModeText(""SERVER_NAME" - Ver. "SERVER_VER"");
 	AddPlayerClass(0, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
-	#include <./modular/maps/game1_6.pwn"
+	#include "./modular/maps/game1_6.pwn"
 	#include "./modular/custom.pwn"
 	#include "./modular/sql/create.pwn"
 	return 1;
